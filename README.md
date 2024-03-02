@@ -9,3 +9,11 @@ A simple matching memory cards web-application, made with HTML, CSS and JavaScri
 
 ![image](https://github.com/cheezyx/MatchingCardsGame/assets/143520681/9a5bf8c5-d413-4fc1-9bb3-49dff025805e)
 
+### Executing program
+
+* Download the repo
+* Open index.html
+```
+git clone https://github.com/cheezyx/MatchingCardsGame
+
+```
