@@ -1,0 +1,117 @@
+@import url(https://fonts.googleapis.com/css?family=VT323);
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'VT323', monospace;
+    text-transform: uppercase;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #b20606;
+}
+h3 {
+    font-size: 4.0rem;
+    padding: 20px;
+}
+p {
+    font-size: 3.2rem;
+    padding: 10px;
+}
+button {
+    background: #1206b2;
+    font-size: 3.2rem;
+    border-bottom: 6px inset rgba(0,0,0,.5);
+	border-left: 6px inset rgba(0,0,0,.5);
+	border-right: 6px inset rgba(255,255,255,.5);
+	border-top: 6px inset rgba(255,255,255,.5);
+	box-sizing: border-box;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+    z-index: 1;
+}
+button:hover {
+    background: #0a0911;
+}
+.memory-wrapper {
+    height: 600px;
+    width: 600px;
+    background: #ff7777;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .1);
+    perspective: 1000px;
+}
+
+.card {
+    height: calc(25% - 10px);
+    width: calc(25% - 10px);
+    margin: 5px;
+    object-fit: cover;
+    position: relative;
+    box-shadow: 1px 3px 3px rgba(0, 0, 0, .3);
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .2s;
+}
+
+.front-view,
+.back-view {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  position: absolute;
+  border-radius: 5px;
+  background: #ccc01c;
+  backface-visibility: hidden;
+}
+/* for early checking if front and back are aligned properly
+.back-view { 
+    opacity: 30%;
+}*/
+.card.flip {
+    transform: rotateX(180deg);
+}
+.front-view {
+    transform: rotateX(180deg);
+}
+
+@media screen and (max-width: 1200px) {
+    .memory-wrapper {
+        height: 500px;
+        width: 500px;
+    }
+    h3 {
+        font-size: 3rem;
+    }
+    p {
+        font-size: 2.5rem;
+    }
+    button {
+        font-size: 2.5rem;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .memory-wrapper {
+        height: 400px;
+        width: 400px;
+    }
+    h3 {
+        font-size: 2.5rem;
+    }
+    p {
+        font-size: 2.2rem;
+    }
+    button {
+        font-size: 2.2rem;
+    }
+}
